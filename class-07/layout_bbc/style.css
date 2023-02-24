@@ -1,0 +1,131 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* Boxing Wireframe */
+/* Comment this ruleset out once drafting is complete */
+body * {
+    border: solid 1px black;
+}
+
+div#wrapper * {
+    margin: 0;
+    overflow: auto;
+}
+
+div#wrapper {
+    margin: 0 12.5%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+div#header {
+    height: 64px;
+    background-color: black;
+    margin-bottom: 150px;
+}
+
+header, footer {
+    clear: both;
+}
+
+
+/* ***** Header ***** */
+nav * {
+    height: 60px;
+    line-height: 60px;
+    color: white;
+    float: left;
+}
+
+img {
+    width: 100px;
+    max-height: 62px;
+}
+
+li {    
+    width: 75px;
+    list-style: none;
+    float: left;
+    text-align: center;
+}
+
+form#nav-search {
+    height: 60px;
+    border: 0px;
+    float: right;
+    line-height: 0px;
+    width: 150px;
+}
+
+input#nav-search-input {
+    background-color: darkgray;
+    width: 150px;
+}
+
+
+
+/* ***** Body ***** */
+
+section#top-left-section, section#top-right-section {
+    height: 300px;
+    width: 50%;
+    float: left;
+}
+
+section.top-right-mini-sections {
+    height: 150px;
+    width: 50%;
+    float: left;
+}
+
+div#top-headings {
+    margin: 10% 0 0 0;
+    width: 100%;
+}
+
+div#top-headings * {
+    width: 50%;
+    line-height: 50px;
+    float: left;
+}
+
+div#top-main {
+    margin-bottom: 200px;
+}
+
+div#bottom-headings {
+    width: 100%;
+    display: block;
+}
+
+section.bottom-main-sections {
+    width: 33.3333%;
+    float: left;
+}
+
+section.bottom-main-sections h4 {
+    height: 50px;
+    line-height: 50px;
+}
+
+section.bottom-main-sections p {
+    height: 50px;
+    line-height: 50px;
+}

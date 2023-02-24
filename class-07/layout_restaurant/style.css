@@ -1,0 +1,277 @@
+/* ==================== */
+/* DEFAULT HACKS */
+/* ==================== */
+
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+
+/* Clear Fix Hack */
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+.clear {
+    clear: both;
+}
+
+/* ==================== */
+/* GENERAL OR TEMPORARY */
+/* ==================== */
+
+/* Wireframing - Turn off before commit */
+body * {
+    border: solid 1px black;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 3000px;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+h1, h2, h5, h6 {
+    font-family: 'Yeseva One', sans-serif;
+}
+
+h1, h2 {
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+h4 {
+    color: orange;
+}
+
+button {
+    background: orange;
+    color: white;
+    padding: 10px 20px;
+    line-height: 20px;
+}
+
+input {
+    height: 40px;
+    line-height: 40px;
+    width: 300px;
+}
+
+.floatwidth13 {
+    width: 12.5%;
+    float: left;
+}
+
+.floatwidth20 {
+    width: 20%;
+    float: left;
+}
+
+.floatwidth25 {
+    width: 25%;
+    float: left;
+}
+
+.floatwidth33 {
+    width: 33.3333%;
+    float: left;
+}
+
+.floatwidth50 {
+    width: 50%;
+    float: left;
+}
+
+/* ==================== */
+/* BODY 1 */
+/* ==================== */
+
+div#body1 {
+    height: 20%;
+    background: 
+        linear-gradient(
+            45deg,
+            rgb(217, 228, 232), 
+            rgb(245, 249, 250)
+            );
+}
+
+img {
+    width: 500px;
+}
+
+/* HEADER */
+header {
+    height: 10%;
+    width: 65%;
+    float: right;
+}
+
+/* BODY 1-1 */
+
+div#body1-1 {
+    height: 90%;
+    width: 65%;
+    padding-left: 5%;
+    clear: right;
+}
+
+/* ==================== */
+/* BODY 2 */
+/* ==================== */
+
+div#body2 {
+    height: 20%;
+}
+
+div#body2 div {
+    width: 60%;
+    float: right;
+}
+
+div#body2-1 {
+    height: 40%;
+    padding-right: 5%;
+
+}
+
+div#body2-2 {
+    height: 60%;
+    padding-right: 5%;
+
+}
+
+/* ==================== */
+/* BODY 3 */
+/* ==================== */
+
+div#body3 {
+    height: 20%;
+    text-align: center;
+    background: 
+    linear-gradient(
+        45deg,
+        rgb(217, 228, 232), 
+        rgb(245, 249, 250)
+        );
+}
+
+/* BODY 3-1 */
+div#body3-1 {
+    height: 30%;
+}
+
+/* BODY 3-2 */
+div#body3-2 {
+    height: 25%;
+    margin: 0 20%;
+}
+
+/* BODY 3-3 */
+div#body3-3 {
+    height: 45%;
+    margin: 0 5%;
+}
+
+div.product-placeholder {
+    width: 20%;
+    height: 60%;
+    margin: 2.5%;
+}
+
+/* ==================== */
+/* BODY 4 */
+/* ==================== */
+
+div#body4 {
+    height: 20%;
+    text-align: center;
+}
+
+/* BODY 4-1 */
+div#body4-1 {
+    height: 25%;
+}
+
+/* BODY 4-2 */
+div#body4-2 {
+    height: 25%;
+}
+
+/* BODY 4-3 */
+div#body4-3 {
+    height: 50%;
+}
+
+/* ==================== */
+/* BODY 5 */
+/* ==================== */
+
+div#body5 {
+    height: 20%;
+    text-align: center;
+    background: 
+    linear-gradient(
+        45deg,
+        rgb(217, 228, 232), 
+        rgb(245, 249, 250)
+        );
+}
+
+/* BODY 5-1 */
+div#body5-1 {
+    height: 25%;
+}
+
+/* BODY 5-2 */
+div#body5-2 {
+    height: 35%;
+}
+
+/* BODY 5-3 */
+div#body5-3 {
+    height: 40%;
+    font-style: italic;
+}
+
+/* ==================== */
+/* MEDIA QUERIES */
+/* ==================== */
+
+/* 320px — 480px: Mobile devices */
+@media (min-width: 320px) and (max-width: 480px) {
+    
+}
+
+/* 481px — 768px: iPads, Tablets */
+@media (min-width: 481px) and (max-width: 768px)  {
+    
+}
+
+/* 769px — 1024px: Small screens, laptops */
+@media (min-width: 769px) and (max-width: 1024px)  {
+    
+}
+
+/* 1025px — 1200px: Desktops, large screens */
+@media (min-width: 1025px) and (max-width: 1200px)  {
+    
+}
+
+/* 1201px and more —  Extra large screens, TV */
+@media (max-width: 1201px)  {
+    
+}

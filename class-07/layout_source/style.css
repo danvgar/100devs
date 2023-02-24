@@ -1,0 +1,235 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+
+/* Clear Fix Hack */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    clear: both;
+    *zoom: 1;
+}
+
+/* GENERAL */
+body * {
+    /* border: solid 1px black; */
+    font-family: 'Roboto', 'Open-sans', sans-serif;
+}
+
+button {
+    background-color: rgb(43, 65, 85,1);
+    border: solid 1px black;
+    color: white;
+    padding: 5px 15px;
+    font-family: 'Roboto', sans-serif;
+    height: 32px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color:rgb(43, 65, 85,1);
+}
+
+.floatwidth25 {
+    float: left;
+    width: 25%;
+}
+
+.floatwidth33 {
+    float: left;
+    width: 33.3333%;
+}
+
+.floatwidth50 {
+    float: left;
+    width: 50%;
+}
+
+p {
+    color: rgb(43, 65, 85,1);
+    font-size: 12px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 12px;
+    color:rgb(43, 65, 85,1);
+    font-weight: bold;
+}
+
+/* ========================= */
+/* BODY 1 */
+/* ========================= */
+div#body1 {
+    width: 100%;
+    height: 830px;
+    background: rgb(245, 249, 252,1);
+}
+
+/* BODY 1 - HEADER */
+div#body1 header {
+    width: 100%;
+    height: 5%;
+}
+
+header div {
+    height: 100%;
+}
+
+header div#header-left h4 {
+    margin: 5px 20px;
+    font-size: 20px;
+}
+
+header div#header-middle ul{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header div#header-middle li {
+    list-style: none;
+    font-size: 12px;
+    text-decoration: none;
+    height: inherit;
+}
+
+header div#header-middle li a {
+    line-height: 30px;
+}
+
+header div#header-right button {
+    float: right;
+    margin: 5px 20px;
+}
+
+/* BODY 1-1 */
+
+div#body1 div#body1-1 {
+    height: 60%;
+    margin: 0 15%;
+}
+
+div#body1-1-left, div#body1-1-right {
+    height: 100%;
+}
+
+div#body1-1-left-content {
+    height: 330px;
+    width: 300px;
+    margin: 15% auto;
+}
+
+div#body1-1 div#body1-1-left div#body1-1-left-content h6 {
+    color: rgb(126, 149, 168);
+    text-transform: uppercase;
+}
+
+div#body1-1 div#body1-1-left div#body1-1-left-content form {
+    color: rgb(144, 163, 181);
+    background-color: rgb(225, 233, 240);
+    height: 32px;
+    line-height: 32px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+div#body1-1 div#body1-1-left div#body1-1-left-content form input {
+    color: rgb(144, 163, 181);
+    border: none;
+    background-color: rgb(225, 233, 240);
+    width: 73%;
+    height: 100%;
+    font-size: 10px;
+    padding: 0;
+    padding-left: 10px;
+    margin: 0;
+    float: left;
+}
+
+div#body1-1 div#body1-1-left div#body1-1-left-content button {
+    float: right;
+    margin: 0;
+}
+
+div#body1-1-right-content {
+    height: 100%;
+}
+
+/* BODY 1-2 */
+
+div#body1 div#body1-2 {
+    height: 35%;
+    margin: 0 15%;
+    padding: 0;
+}
+
+div#body1-2 div {
+    height: 100%;
+}
+
+div#body1-2 p {
+    height: 50%;
+    margin-bottom: 0;
+}
+
+/* ========================= */
+/* BODY 2 */
+/* ========================= */
+
+div#body2-1 {
+    margin: 0 15%;
+}
+
+div#body2-1 p {
+    font-size: 14px;
+}
+
+/* ========================= */
+/* Media Queries */
+/* ========================= */
+
+@media screen and (max-width: 600px) {
+    div#header-middle, div#header-right, div#body1-2 {
+        display: none;
+    }
+    
+    div#header-left {
+        width: 100%;
+    }
+    
+    div#header-left h4 {
+        text-align: center;
+    }
+    
+    div#body1-1-left {
+        width: 100%;
+    }
+    
+    div#body1 {
+        height: 95%;
+    }
+    
+    div#body1-1-left-content input, div#body1-1-left-content button, div#body1-1-right{
+        float: none;
+        width: 100%;
+    }
+
+    button {
+        margin: 10px 0 !important;
+    }
+
+    div#body1-1-left-content p {
+        font-size: 16px;
+        padding: 10% 0;
+    }
+}

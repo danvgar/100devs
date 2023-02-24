@@ -1,0 +1,349 @@
+/* Box Model Hack */
+* {
+    box-sizing: border-box;
+}
+
+/* Clear Fix Hack */
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    clear: both;
+    *zoom: 1;
+}
+
+/* Boxing Wireframe, to be commented out */
+/* body * {
+    border: solid 1px black; 
+} */
+
+
+/* GENERAL */
+* {
+    font-family: 'Oswald', 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 2197px;
+    margin: auto;
+}
+
+
+/* BODY 1 (GENERAL)*/
+div#body1 {
+    background-color: rgb(102, 118, 138,1);
+    color:white;
+    height: 25%;
+}
+
+/* BODY 1 - HEADER */
+header {
+    height: 10%;
+    padding: 0 5%;
+}
+
+header div {
+    width: 33.3333%;
+    height: 100%;
+    float: left;
+}
+
+header div.header-left * {
+    list-style: none;
+}
+
+header div.header-left ul {
+    margin: 10px 0;
+    padding: 0;
+}
+
+header div.header-left li {
+    float: left;
+    padding: 0;
+    margin-right: 10%;
+    line-height: 35px;
+}
+
+header div.header-center img {
+    display: block;
+    width: 35px;
+    margin: 10px auto;
+    text-align: center;
+}
+
+header div.header-right button {
+    float: right;
+    margin: 10px;
+    width: 60px;
+    line-height: 35px;
+    border-radius: 5px;
+    color: rgb(102, 118, 138,1);
+}
+
+/* BODY 1 - Sub-Containers*/
+
+div#body1-1 {
+    height: 35%;
+}
+
+div#body1-1 h1 {
+    height: 100%;
+    font-size: 46px;
+    font-weight: 200;
+    text-align: center;
+    margin: 0 5%;
+    padding: 50px 0;
+}
+
+div#body1-2 {
+    height: 15%;
+}
+
+div#body1-2 p {
+    text-align:center;
+    font-size: 18px;
+    margin: 0 5%;
+    height: 100%;
+}
+
+div#body1-3 {
+    height: 20%;
+}
+
+div#body1-3 p {
+    vertical-align: middle;
+    text-align: center;
+    font-size: 18px;
+    margin: 0 5%;
+    padding: 30px 0;
+    height: 100%;
+    margin: auto;
+}
+
+div#body1-4 {
+    height: 20%;
+}
+
+div#body1-4 p {
+    font-size: 16px;
+    margin: 0 5%;
+    padding: 50px 0;
+    text-align: center;
+    font-style: italic;
+    color: rgb(68, 72, 87,1);
+    height: 100%;
+}
+
+/* BODY 2 */
+div#body2 {
+    text-align: center;
+    padding: 50px 0;
+    height: 15%;
+}
+
+div#body2 h2 {
+    margin: 50px 15% 0%;
+}
+
+div#body2 p {
+    margin: 0% 15% 10%;
+}
+
+/* BODY 3 */
+div#body3 {
+    height: 30%;
+    background-color: rgb(219, 223, 226,1);
+}
+
+div#body3-1 {
+    margin: 0 5%;
+    height: 100%;
+}
+
+div#body3-left, div#body3-right {
+    width: 50%;
+    margin: 50px 0;
+    height: 80%;
+    float: left;
+    text-align: center;
+}
+
+div#body3-left-div, div#body3-right-div {
+    height: 170px;
+    width: 300px;
+    background-color: rgb(102, 118, 138,1);
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+    padding: auto;
+}
+
+div.div10 {
+    width: 10%;
+    float: left;
+}
+
+div.div33 {
+    width: 33.3333%;
+    float: left;
+}
+
+div#body3-left h3, div#body3-left p, div#body3-left button {
+    clear: both;
+}
+
+div#body3-right h3, div#body3-right p, div#body3-right button {
+    clear: both;
+}
+
+div#body3-left button, div#body3-right button {
+    padding: 10px 25px;
+    font-size: 16px;
+    background: transparent;
+}
+
+/* BODY 4 */
+div#body4 {
+    text-align: center;
+    padding: 50px 0;
+    height: 15%;
+}
+
+div#body4 h2 {
+    margin: 5% 15% 0%;
+    padding: 1%;
+}
+
+div#body4 p {
+    margin: 0% 15% 10%;
+    padding: 1%;
+}
+
+/* BODY 5 (FOOTER) */
+
+div#body5 {
+    height: 15%;
+    background-color: rgb(22, 31, 42, 1);
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+div#body5 * {
+    font-family: 'Roboto', sans-serif;;
+}
+
+footer {
+    height: 100%;
+    width: 90%;
+    margin: 0 5%;
+}
+
+div#body5-left {
+    width: 25%;
+    height: 75%;
+    float: left;
+}
+
+div#body5-left *, div#body5-right * {
+    margin: 0;
+}
+
+div#body5-left, div#body5-right {
+    padding-top: 60px;
+}           
+
+div#body5-left h5 {
+    font-size: 16px;
+    font-weight: 700;
+    color: rgb(96, 112, 131);
+    padding: 1%;
+}
+
+div#body5-left ul {
+    margin: 0;
+    padding: 1%;
+}
+
+div#body5-left li {
+    list-style: none;
+    float: left;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0;
+    padding-right: 15%;
+}
+
+div#body5-left img {
+    width: 30px;
+}
+
+div.spacer60 {
+    width: 50%;
+    height: 75%;
+    float: left;
+}
+
+div#body5-right {
+    width: 25%;
+    height: 75%;
+    float: right;
+    margin: 0;
+}
+
+div#body5-right p {
+    font-size: 14px;
+}
+
+div#body5-right p span {
+    font-size: 16px;
+}
+
+div#body5-bottom {
+    height: 25%;
+    clear: both;
+    border-top: solid white 1px;
+    font-size: 18px;
+    padding-top: 2%;
+}
+
+div#body5-bottom h6 {
+    height: 25%;
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+
+div#body5-bottom img {
+    display: block;
+    width: 35px;
+    float: right;
+}
+
+/* Font Awesome Icons */
+i {
+    color:white;
+    font-size: 24px;
+}
+
+div#body1-3 i {
+    font-size: 36px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Media Queries */
+@media screen and (max-width: 680px) {
+    div#body3-left-div, div#body3-right-div, div#body1-3, div#body1-4 {
+        display: none;
+    }
+}

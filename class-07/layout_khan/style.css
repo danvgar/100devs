@@ -1,0 +1,87 @@
+/* Box Model Hack */
+* {
+  box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+.clear {
+  clear: both;
+}
+
+/* --------------------------------------------------- */
+
+/* Boxing Wireframe */
+/* Comment this ruleset out once drafting is complete */
+
+/* div *{
+  border: solid 1px black;
+} */
+
+div * {
+  font-family: 'Lato', 'Noto Sans', 'Helvetica', 'Corbel', sans-serif;
+}
+
+/* Body */
+body {
+  margin: 0 5%;
+}
+
+/* Header */
+header * {
+  height: 80px;
+  line-height: 80px;
+  color: rgb(47, 102, 243, 1);
+  font-weight: bold;
+  margin: 0 0 100px 0;;
+  padding: 0;
+  border: none;
+}
+
+header form {
+  float: left;
+}
+
+header ul {
+  list-style: none;
+  float: right;
+}
+
+header li {
+  width: 90px;
+  text-align: center;
+  float: right;
+}
+
+/* Main */
+
+main section {
+  width: 50%;
+  height: 750px;
+  float: left;
+}
+
+img#mainimage {
+  width: 100%;
+}
+
+main span {
+  border-bottom: double 8px green;
+}
+
+main button {
+  width: 115px;
+  height: 50px;
+  float: leftl;
+  border-radius: 5px;
+  background: rgba(47, 102, 243, 1);
+  color: white;
+}
