@@ -1,0 +1,139 @@
+/* Box Model Hack */
+body *{
+    box-sizing: border-box;
+}
+
+/* Base Style */
+
+body * {
+    /* Boxing Wireframe */
+    /* border: solid 1px black; */
+    display: block;
+    font-family: Helvetica, Arial, sans-serif;
+    margin: 0px;
+    padding: 1%;
+}
+
+/* Navigator */
+nav {
+    width: 15%;
+    height: 1500px;
+    float: left;
+    padding: 25px 0;
+}
+
+nav * {
+    padding: 0 25px;
+    font-size: 30px;
+    color: rgba(133, 133, 133, 1);
+}
+
+nav img {
+    width: 100%;
+    height: 45px;
+}
+
+nav a { 
+    color: orange;
+    text-decoration: none;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+/* Main */
+main {
+    width: 85%;
+    height: 100%;
+    float: left;
+}
+
+main h1 {
+    font-size: 50px;
+    font-weight: bolder;
+    
+}
+
+main h2 {
+    font-size: 30px;
+    font-weight: bolder;
+}
+
+main p {
+    color: rgba(133, 133, 133, 1);
+    font-size: 28px;
+}
+
+main p.author {
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+main p.time-and-date {
+    color: rgba(133, 133, 133, 1);
+    font-size: 18px;
+    
+}
+
+/* Left Section */
+
+section#left {
+    width: 65%;
+    height: 750px;
+    float: left;
+    padding-right: 5%;
+}
+
+section#left img {
+    width: 100%;
+    height: 500px;
+}
+
+section#left h4 {
+    color: orange;
+    font-size: 30px;
+}
+
+/* Right Section */
+
+section#right {
+    width: 35%;
+    height: 750px;
+    float: left;
+}
+
+section#right section {
+    padding: 20px 0;
+    border-bottom: solid 2px rgba(133, 133, 133, 1);
+}
+
+
+/* Bottom Section */
+
+section#bottom {
+    height: 400px;
+    clear: both;
+}
+
+section#bottom section {
+    width: 33.3333%;
+    height: 300px;
+    float: left;
+}
+
+section#bottom img {
+    width: 100%;
+    height: 300px;
+}
+
+section#bottom h3 {
+    font-size: 24px;
+    padding: 40px 0;
+    border-bottom: solid 1px rgba(133, 133, 133, 1);
+}
