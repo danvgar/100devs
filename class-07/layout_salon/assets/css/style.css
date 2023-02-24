@@ -117,7 +117,7 @@ div#body1-1 {
 div#body1-1:before {
     position: absolute;
     z-index: -2;
-    background-image: url("img3.jpg");
+    background-image: url("images/img3.jpg");
     background-size: cover;
     background-position: left top;
     border-radius: 0 0 100px 0;
