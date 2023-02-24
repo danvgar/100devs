@@ -5,7 +5,7 @@ Private repository for 100dev assignments and practice
 
 ## Class 07 - HTML/CSS Practice
 *Goal is to progressively improve website HTML/CSS layouts to greater accuracy*
- - [Layout Photos](
+ - [Layout Photos](https://github.com/danvgar/100devs/tree/main/class-07/_layout-photos)
  - [BBC Website](https://danvgar.github.io/100devs/class-07/layout_bbc/)
  - [Khan Academy](https://danvgar.github.io/100devs/class-07/layout_khan/)
  - [Tech Crunch](https://danvgar.github.io/100devs/class-07/layout_techcrunch/)
