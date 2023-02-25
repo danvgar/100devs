@@ -13,3 +13,4 @@ Personal repository for 100dev assignments and practice
 5. [Source Template](https://danvgar.github.io/100devs/class-07/layout_source/)
 6. [Salon Template](https://danvgar.github.io/100devs/class-07/layout_salon/)
 7. [Restaurant Template](https://danvgar.github.io/100devs/class-07/layout_restaurant/)
+8. [Simple Site Lab](https://danvgar.github.io/100devs/class-07/layout_simplesitelab/)
