@@ -21,7 +21,7 @@
 /* Boxing Wireframe */
 /* Comment this ruleset out once drafting is complete */
 body * {
-    border: solid 1px black;
+    /* border: solid 1px black; */
 }
 
 div#wrapper * {
