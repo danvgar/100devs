@@ -11,4 +11,11 @@
 
 // P.S. In this task the function should support only natural values of n: integers up from 1.
 
-function pow(x,n)
+function pow(x,n) {
+    x = prompt('Enter a number you would like to exponentially increase.')
+    n = prompt('Enter the value to exponentially increase it to.')
+    while (n < 1) { 
+        n = prompt('Please enter a minimum value of 1.')
+    }
+    return alert(x ** n) 
+}
