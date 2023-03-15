@@ -1,19 +1,28 @@
-document.getElementById('purple').onclick = partyPurple
+document.getElementById('red').onclick = partyRed
+document.getElementById('yellow').onclick = partyYellow
 document.getElementById('green').onclick = partyGreen
-document.getElementById('blue').onclick = partyBlue
+document.querySelector('#reset').onclick = partyOver
 
 
-function partyPurple() {
-  document.querySelector('body').style.backgroundColor = 'rgba(241,63,247,1)'
+function partyRed() {
+  document.querySelector('body').style.backgroundColor = 'red'
   document.querySelector('body').style.color = 'white'
+  document.querySelector('#reset').style.color = 'black'
+}
+
+function partyYellow() {
+  document.querySelector('body').style.backgroundColor = 'yellow'
+  document.querySelector('body').style.color = 'black'
 }
 
 function partyGreen() {
-  document.querySelector('body').style.backgroundColor = 'rgba(0,253,81,1)'
+  document.querySelector('body').style.backgroundColor = 'green'
   document.querySelector('body').style.color = 'white'
+  document.querySelector('#reset').style.color = 'black'
 }
 
-function partyBlue() {
-  document.querySelector('body').style.backgroundColor = 'rgba(0,254,255)'
-  document.querySelector('body').style.color = 'white'
+function partyOver() {
+  document.querySelector('body').style.backgroundColor = 'white'
+  document.querySelector('body').style.color = 'black'
+  document.querySelector('#reset').style.color = 'red'
 }
