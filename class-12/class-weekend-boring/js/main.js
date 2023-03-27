@@ -28,12 +28,12 @@ function check() {
 }
 
 // Trigger main functionality when enter key is pressed
-
 // Currently not working
-// document.querySelector('#day').addEventListener('keyup',pressEnter)
 
-// function pressEnter() {
-//   if (pressEnter.keyCode === 13) {
-//     document.querySelector('#check').click()
-//   }
-// }
+document.querySelector('#day').addEventListener('keyup',pressEnter)
+
+function pressEnter(event) {
+  if (event.key === 'Enter') {
+    document.querySelector('#check').click()
+  }
+}
