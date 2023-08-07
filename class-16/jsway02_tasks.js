@@ -74,17 +74,17 @@ console.log(a, b, c, d, e, f, g);
 // ********************
 // Write a program that asks the user for a raw price. After that, it calculates the corresponding final price using a VAT rate of 20.6%.
 
-const rawPrice = prompt("Please provide the raw price.")
-const finalPrice = rawPrice * 1.2
-alert(`The final prce is ${finalPrice}`)
+const RAWPRICE = prompt("Please provide the raw price.")
+const FINALPRICE = RAWPRICE * 1.2
+alert(`The final prce is ${FINALPRICE}`)
 
 // ********************
 // From Celsius to Fahrenheit degrees
 // ********************
 // Write a program that asks for a temperature in Celsius degrees, then displays it in Fahrenheit degrees.
-const celsius = prompt("Please provide the temperature in celsius")
-const fahrenheit = celsius * (9/5) + 32
-alert(`The temperature in fahrenheit is ${fahrenheit}`)
+const CELSIUS = prompt("Please provide the temperature in celsius")
+const FAHRENHEIT = CELSIUS * (9/5) + 32
+alert(`The temperature in fahrenheit is ${FAHRENHEIT}`)
 
 // !!! info
 // The conversion between scales is given by the formula: [°F] = [°C] x 9/5 + 32.

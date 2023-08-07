@@ -17,26 +17,26 @@
 // Following day
 // ********************
 // Write a program that accepts a day name from the user, then shows the name of the following day. Incorrect inputs must be taken into account.
-const dayOfWeek = prompt("What day of the week is it?")
-if (dayOfWeek.toLowerCase() !== "monday" || "tuesday" || "wednesday" || "thursday" || "friday" || "saturday" || "sunday") {
-    alert("Please enter a valid day of the week.")
-} else if (dayOfWeek === "monday") {
+const DAYOFWEEK = prompt("What day of the week is it?").toLowerCase()
+if (DAYOFWEEK === "monday") {
     alert("Tomorrow is Tuesday.")
-} else if (dayOfWeek === "tuesday") {
+} else if (DAYOFWEEK === "tuesday") {
     alert("Tomorrow is Wednesday.")
-} else if (dayOfWeek === "wednesday") {
+} else if (DAYOFWEEK === "wednesday") {
     alert("Tomorrow is Thursday.")
-} else if (dayOfWeek === "thursday") {
+} else if (DAYOFWEEK === "thursday") {
     alert("Tomorrow is Friday.")
-} else if (dayOfWeek === "friday") {
+} else if (DAYOFWEEK === "friday") {
     alert("Tomorrow is Saturday.")
-} else if (dayOfWeek === "saturday") {
+} else if (DAYOFWEEK === "saturday") {
     alert("Tomorrow is Sunday.")
-} else if (dayOfWeek === "sunday") {
+} else if (DAYOFWEEK === "sunday") {
     alert("Tomorrow is Monday.")
+} else {
+    alert("Please enter a valid day of the week.")
 }
 
-switch (dayOfWeek) {
+switch (DAYOFWEEK.toLowerCase()) {
     case "monday":
         alert("Tomorrow is Tuesday.")
         break;
@@ -68,6 +68,8 @@ switch (dayOfWeek) {
 // ********************
 // Write a program that accepts two numbers, then compares their values and displays an appropriate message in all cases.
 
+const NUM1 = prompt("Please provide a number")
+const NUM2 = prompt("Please provide a number")
 
 
 // ********************
