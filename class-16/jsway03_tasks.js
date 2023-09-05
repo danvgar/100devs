@@ -8,9 +8,7 @@
 // Here are a few pieces of advice about these exercises:
 
 // Keep on choosing your variable names wisely, and respect indentation when creating code blocks associated to if, else and switch statements.
-
 // Try to find alternative solutions. For example, one using an if and another using a switch.
-
 // Test your programs thoroughly, without fear of finding mistakes. It's a very important skill.
 
 // ********************
@@ -157,6 +155,26 @@ daysOfMonth(2)
 // Write a program that asks for a time under the form of three information (hours, minutes, seconds). The program calculates and shows the time one second after. Incorrect inputs must be taken into account.
 
 // This is not as simple as it seems... Look at the following results to see for yourself:
+
+function secondIncrement(h,m,s) {
+     s++
+     if(s > 59) {
+        s -= 60
+        m++
+     }
+     if(m > 59) {
+        m -= 60
+        h++
+     }
+     if(h > 23) {
+        h -= 24
+     }
+     console.log(`${h}h${m}m${s}s`)
+}
+
+secondIncrement(14,17,59)
+secondIncrement(6,59,59)
+secondIncrement(23,59,59)
 
 // 14h17m59s should give 14h18m0s
 // 6h59m59s should give 7h0m0s
