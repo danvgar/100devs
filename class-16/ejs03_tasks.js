@@ -1,6 +1,6 @@
 // Eloquent Java Script
 // Chapter 3: Functions
-// https://eloquentjavascript.net/02_program_structure.html
+// https://eloquentjavascript.net/03_functions.html
 
 // ********************
 // Exercises
@@ -13,11 +13,18 @@
 // The previous chapter introduced the standard function Math.min that returns its smallest argument. We can build something like that now. Write a function min that takes two arguments and returns their minimum.
 
 // // Your code here.
+function min(a, b) {
+    return a < b ? a : b
+}
 
-// console.log(min(0, 10));
+min(0, 10)
+min(0, -10)
+
+console.log(min(0, 10));
 // // → 0
-// console.log(min(0, -10));
+console.log(min(0, -10));
 // // → -10
+
 
 // ********************
 // Recursion
@@ -25,24 +32,33 @@
 
 // We’ve seen that % (the remainder operator) can be used to test whether a number is even or odd by using % 2 to see whether it’s divisible by two. Here’s another way to define whether a positive whole number is even or odd:
 
-// Zero is even.
-
-// One is odd.
-
-// For any other number N, its evenness is the same as N - 2.
+// 1. Zero is even.
+// 2. One is odd.
+// 3. For any other number N, its evenness is the same as N - 2.
 
 // Define a recursive function isEven corresponding to this description. The function should accept a single parameter (a positive, whole number) and return a Boolean.
 
 // Test it on 50 and 75. See how it behaves on -1. Why? Can you think of a way to fix this?
 
 // // Your code here.
+function isEven(N) {
+    switch (Math.abs(N)) {
+        case 0:
+            return true
+        case 1:
+            return false
+        default:
+            return isEven(N - 2)
+    }
+}
 
-// console.log(isEven(50));
+console.log(isEven(50));
 // // → true
-// console.log(isEven(75));
+console.log(isEven(75));
 // // → false
-// console.log(isEven(-1));
+console.log(isEven(-1));
 // // → ??
+
 
 // ********************
 // Bean counting
@@ -55,8 +71,16 @@
 // Next, write a function called countChar that behaves like countBs, except it takes a second argument that indicates the character that is to be counted (rather than counting only uppercase “B” characters). Rewrite countBs to make use of this new function.
 
 // // Your code here.
+function countBs(str) {
+    return [...str].filter( (element) => element === "B").join("").length
+}
 
-// console.log(countBs("BBC"));
+function countChar(str, char) {
+    return [...str].filter( (element) => element === char).join("").length
+
+}
+
+console.log(countBs("BBC"));
 // // → 2
-// console.log(countChar("kakkerlak", "k"));
+console.log(countChar("kakkerlak", "k"));
 // // → 4
