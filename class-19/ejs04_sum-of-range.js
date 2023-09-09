@@ -2,7 +2,10 @@
 // Chapter 4: Data Structures: Objects and Arrays
 // https://eloquentjavascript.net/04_data.html
 
+// ********************
 // Exercises
+// ********************
+
 // ********************
 // The sum of a range
 // ********************

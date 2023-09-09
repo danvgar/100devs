@@ -2,7 +2,10 @@
 // Chapter 4: Data Structures: Objects and Arrays
 // https://eloquentjavascript.net/04_data.html
 
+// ********************
 // Exercises
+// ********************
+
 // ********************
 // Deep comparison
 // ********************
@@ -17,10 +20,14 @@
 
 // // Your code here.
 
-let obj = {here: {is: "an"}, object: 2};
+function deepEqual(val1, val2) {
+    return val1 === val2
+}
+
+let obj = { here: { is: "an" }, object: 2 };
 console.log(deepEqual(obj, obj));
 // // → true
-console.log(deepEqual(obj, {here: 1, object: 2}));
+console.log(deepEqual(obj, { here: 1, object: 2 }));
 // // → false
-console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+console.log(deepEqual(obj, { here: { is: "an" }, object: 2 }));
 // // → true
