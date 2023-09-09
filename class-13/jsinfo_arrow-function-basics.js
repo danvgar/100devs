@@ -1,3 +1,15 @@
+// Javascript.info
+// JavaScript Fundamentals > Arrow functions, the basics
+// https://javascript.info/arrow-functions-basics
+
+// ********************
+// Tasks
+// ********************
+
+// ********************
+// Rewrite with arrow functions
+// ********************
+
 // Replace Function Expressions with arrow functions in the code below:
 
 // function ask(question, yes, no) {
@@ -16,5 +28,5 @@ let ask = (question,yes,no) => {
     let yes = () => alert("You agreed.")
     let no = () => alert("You cancelled the execution.")
     
-    confirm(question) ? return yes() : return no()
+    return confirm(question) ? yes() : no()
 }
