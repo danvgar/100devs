@@ -78,3 +78,6 @@ for (let node = list; node; node = node.rest) { }
 // Can you see how that works? Every iteration of the loop, node points to the current sublist, and the body can read its value property to get the current element. At the end of an iteration, node moves to the next sublist. When that is null, we have reached the end of the list, and the loop is finished.
 
 // The recursive version of nth will, similarly, look at an ever smaller part of the “tail” of the list and at the same time count down the index until it reaches zero, at which point it can return the value property of the node it is looking at. To get the zeroth element of a list, you simply take the value property of its head node. To get element N + 1, you take the Nth element of the list that’s in this list’s rest property.
+
+// Solution: https://stackoverflow.com/questions/28800442/eloquent-javascript-chapter-4-arraytolist-listtoarray-execise
+// Solution: https://medium.com/@czech.candice/eloquent-javascript-data-structures-objects-and-arrays-chapter4-63bffd7d8335

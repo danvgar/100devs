@@ -28,6 +28,7 @@ function deepEqual(obj1, obj2) {
     }
 }
 
+// need to revisit . . .
 
 let obj = {
     here: {
@@ -41,3 +42,13 @@ console.log(deepEqual(obj, { here: 1, object: 2 }));
 // // → false
 console.log(deepEqual(obj, { here: { is: "an" }, object: 2 }));
 // // → true
+
+// Your test for whether you are dealing with a real object will look something like typeof x == "object" && x != null. Be careful to compare properties only when both arguments are objects. In all other cases you can just immediately return the result of applying ===.
+
+// Use Object.keys to go over the properties. You need to test whether both objects have the same set of property names and whether those properties have identical values. One way to do that is to ensure that both objects have the same number of properties (the lengths of the property lists are the same). And then, when looping over one of the object’s properties to compare them, always first make sure the other actually has a property by that name. If they have the same number of properties and all properties in one also exist in the other, they have the same set of property names.
+
+// Returning the correct value from the function is best done by immediately returning false when a mismatch is found and returning true at the end of the function.
+
+// Solution: https://medium.com/@zolotova17/deep-comparison-exercise-explanation-987c4db2cc5e
+// Solution: https://medium.com/@czech.candice/eloquent-javascript-data-structures-objects-and-arrays-chapter4-63bffd7d8335
+// Solution: https://stackoverflow.com/questions/59218035/eloquent-javascript-exercise-deep-comparison
