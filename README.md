@@ -3,6 +3,19 @@ Personal repository for 100dev assignments and practice
 
 ---
 
+# Optimizations
+
+## Class 10
+ - Improve on remaining templates to "pixel perfect" standard
+
+## Class-12
+ - Expand on code to make them unique and functional
+
+## Class-26 
+ - Improve on cocktail API. Add more functionality. Add a carousel.
+<!---
+---
+
 ## Class 10 - HTML/CSS Practice
 *Goal is to progressively improve website HTML/CSS layouts overtime to greater accuracy*
  - [Layout Photos](https://github.com/danvgar/100devs/tree/main/class-07/_layout-photos)
@@ -21,3 +34,5 @@ Personal repository for 100dev assignments and practice
 2. [Background Picker](https://danvgar.github.io/100devs/class-12/background-picker)
 3. [Class Weekend Boring](https://danvgar.github.io/100devs/class-12/class-weekend-boring)
 4. [Simple Calculator](https://danvgar.github.io/100devs/class-12/simple-calculator)
+
+--->
