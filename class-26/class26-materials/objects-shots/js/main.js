@@ -6,7 +6,7 @@ document.querySelector('button').addEventListener('click', getDrink)
 function getDrink() {
     cocktail = document.querySelector('input').value
 
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail}`)
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail.replaceAll(" ","+")}`)
         .then(res => res.json())
         .then(data => {
             console.log(data)
@@ -25,3 +25,4 @@ function getDrink() {
             // }
         })
         .catch(err => console.log(`Error: ${err}`))
+}
