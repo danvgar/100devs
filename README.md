@@ -5,13 +5,13 @@ Personal repository for 100dev assignments and practice
 
 # Optimizations
 
-## Class 10
+## Class 10 (Fundamental HTML/CSS)
  - Improve on remaining templates to "pixel perfect" standard
 
-## Class-12
+## Class-12 (Fundamental JS and DOM Manipulation)
  - Expand on code to make them unique and functional
 
-## Class-26 
+## Class-26 (APIs)
  - Cocktail API Carousel 
      - Adjust icon of radio button based on type of drink (Create array of SVG in main.js)
      - Carousel does not handle overflow well, both list and content
