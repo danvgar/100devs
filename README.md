@@ -5,10 +5,10 @@ Personal repository for 100dev assignments and practice
 
 # Optimizations
 
-## Class 10 (Fundamental HTML/CSS)
+## [Class 10 (Fundamental HTML/CSS)](https://github.com/danvgar/100devs/tree/main/class-10)
  - Improve on remaining templates to "pixel perfect" standard
 
-## Class-12 (Fundamental JS and DOM Manipulation)
+## [Class-12 (Fundamental JS and DOM Manipulation)](https://github.com/danvgar/100devs/tree/main/class-12)
  - Expand on various codes to make them unique and functional
      - "Angry Parent Simulator"
      - "Background Picker"
@@ -16,7 +16,7 @@ Personal repository for 100dev assignments and practice
      - "Simple Calculator"
          - Note: This has been improved upon [here](https://github.com/danvgar/100devs-calculator), though not deployed yet. Add to playground portion of portfolio
 
-## Class-26 (APIs)
+## [Class-26 (APIs)](https://github.com/danvgar/100devs/tree/main/class-26)
  - Cocktail API Carousel 
      - Adjust icon of radio button based on type of drink (Create array of SVG in main.js)
      - Carousel does not handle overflow well, both list and content
