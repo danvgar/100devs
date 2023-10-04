@@ -5,6 +5,9 @@ Personal repository for 100dev assignments and practice
 
 # Optimizations
 
+## This entire repository
+ - Add GIFs, images, etc to README.md
+
 ## [Class 10 (Fundamental HTML/CSS)](https://github.com/danvgar/100devs/tree/main/class-10)
  - Improve on remaining templates to "pixel perfect" standard
 
