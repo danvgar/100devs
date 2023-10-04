@@ -9,7 +9,12 @@ Personal repository for 100dev assignments and practice
  - Improve on remaining templates to "pixel perfect" standard
 
 ## Class-12 (Fundamental JS and DOM Manipulation)
- - Expand on code to make them unique and functional
+ - Expand on various codes to make them unique and functional
+     - "Angry Parent Simulator"
+     - "Background Picker"
+     - "Class Weekend Boring"
+     - "Simple Calculator"
+         - Note: This has been improved upon [here](https://github.com/danvgar/100devs-calculator), though not deployed yet. Add to playground portion of portfolio
 
 ## Class-26 (APIs)
  - Cocktail API Carousel 
