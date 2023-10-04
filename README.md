@@ -12,7 +12,10 @@ Personal repository for 100dev assignments and practice
  - Expand on code to make them unique and functional
 
 ## Class-26 
- - Improve on cocktail API. Add more functionality. Add a carousel.
+ - Cocktail API Carousel 
+     - Adjust icon of radio button based on type of drink (Create array of SVG in main.js)
+     - Carousel does not handle overflow well, both list and content
+     - Fix bugs preventing carousel from fully working properly. Refer to original by [Olivier PASCAL](https://codepen.io/pascaloliv/pen/LVZaeE)
 <!---
 ---
 
