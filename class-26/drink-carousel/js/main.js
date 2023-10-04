@@ -4,21 +4,21 @@ let cocktail = ""
 document.querySelector('button').addEventListener('click', getDrink)
 
 function getDrink() {
+    // Clears out the display before pushing a new drink
+    document.querySelector(".list").innerHTML = ""
+
     cocktail = document.querySelector('input').value
 
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${cocktail.replaceAll(" ", "+")}`)
         .then(res => res.json())
         .then(data => {
             // console.log(data)
-            // console.log(cocktail)
-            for (let i = 0; i < data.drinks.length; i++) {
-                console.log(data.drinks[i])
-                document.querySelector(".links").innerHTML +=
-                    `<a href="#slide-${i}">${i + 1}</a>`
+            if(data.drinks.length > 4) {
+                data.drinks = data.drinks.slice(0, 4)
             }
             for (let i = 0; i < data.drinks.length; i++) {
-                document.querySelector(".slides").innerHTML +=
-                    `<div class="slide" id=slide-${i}><h2>${data.drinks[i].strDrink}</h2><img src="${data.drinks[i].strDrinkThumb}"></img><h3>${data.drinks[i].strInstructions}</h3></div>`
+                console.log(data.drinks[i])
+                document.querySelector(".list").innerHTML += `<li class="item"><input type="radio" name="basic_carousel" checked="checked" /><label class="label">${data.drinks[i].strDrink}</label><div class="content"><img class="picto" src="${data.drinks[i].strDrinkThumb}"><h1>${data.drinks[i].strDrink}</h1><p>${data.drinks[i].strInstructions}</p></div></li>`
             }
         })
         .catch(err => console.log(`Error: ${err}`))

@@ -111,7 +111,7 @@ body #scene #left-zone .list li.item input[type=radio]~label:hover {
   cursor: pointer;
 }
 
-body #scene #left-zone .list li.item input[type=radio]~label.label_strawberry:before {
+body #scene #left-zone .list li.item input[type=radio]~label:before {
   /* Stylize the image next to the label */
   content: " ";
   display: block;
@@ -120,45 +120,6 @@ body #scene #left-zone .list li.item input[type=radio]~label.label_strawberry:be
   height: 50px;
   margin-left: 15px;
   background-image: url("../svg/fa-martini-glass.svg");
-  background-position: center;
-  background-size: 75% 75%;
-  background-repeat: no-repeat;
-}
-
-body #scene #left-zone .list li.item input[type=radio]~label.label_banana:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
-  background-image: url("../svg/fa-whiskey-glass.svg");
-  background-position: center;
-  background-size: 75% 75%;
-  background-repeat: no-repeat;
-}
-
-body #scene #left-zone .list li.item input[type=radio]~label.label_apple:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
-  background-image: url("../svg/fa-martini-glass-citrus.svg");
-  background-position: center;
-  background-size: 75% 75%;
-  background-repeat: no-repeat;
-}
-
-body #scene #left-zone .list li.item input[type=radio]~label.label_orange:before {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  margin-left: 15px;
-  background-image: url("../svg/fa-wine-glass-empty.svg");
   background-position: center;
   background-size: 75% 75%;
   background-repeat: no-repeat;
@@ -179,7 +140,8 @@ body #scene #left-zone .list li.item input[type=radio]~.content {
   flex-direction: column;
 }
 
-body #scene #left-zone .list li.item input[type=radio]~.content.content_strawberry .picto {
+body #scene #left-zone .list li.item input[type=radio]~.content .picto {
+  display: inline;
   height: 100px;
   width: 100px;
   background-image: url("../svg/fa-martini-glass.svg");
@@ -188,47 +150,8 @@ body #scene #left-zone .list li.item input[type=radio]~.content.content_strawber
   background-repeat: no-repeat;
 }
 
-body #scene #left-zone .list li.item input[type=radio]~.content.content_strawberry h1 {
+body #scene #left-zone .list li.item input[type=radio]~.content h1 {
   color: #D64541;
-}
-
-body #scene #left-zone .list li.item input[type=radio]~.content.content_banana .picto {
-  height: 100px;
-  width: 100px;
-  background-image: url("../svg/fa-whiskey-glass.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-body #scene #left-zone .list li.item input[type=radio]~.content.content_banana h1 {
-  color: #F5D76E;
-}
-
-body #scene #left-zone .list li.item input[type=radio]~.content.content_apple .picto {
-  height: 100px;
-  width: 100px;
-  background-image: url("../svg/fa-martini-glass-citrus.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-body #scene #left-zone .list li.item input[type=radio]~.content.content_apple h1 {
-  color: #00B16A;
-}
-
-body #scene #left-zone .list li.item input[type=radio]~.content.content_orange .picto {
-  height: 100px;
-  width: 100px;
-  background-image: url("../svg/fa-wine-glass-empty.svg");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-body #scene #left-zone .list li.item input[type=radio]~.content.content_orange h1 {
-  color: #F27935;
 }
 
 body #scene #left-zone .list li.item input[type=radio]~.content h1:first-letter {
@@ -245,24 +168,9 @@ body #scene #left-zone .list li.item input[type=radio]:checked~label {
   animation: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-body #scene #left-zone .list li.item input[type=radio]:checked~label.label_strawberry {
+body #scene #left-zone .list li.item input[type=radio]:checked~label {
   color: #D64541;
   border-right: solid 4px #D64541;
-}
-
-body #scene #left-zone .list li.item input[type=radio]:checked~label.label_banana {
-  color: #F5D76E;
-  border-right: solid 4px #F5D76E;
-}
-
-body #scene #left-zone .list li.item input[type=radio]:checked~label.label_apple {
-  color: #00B16A;
-  border-right: solid 4px #00B16A;
-}
-
-body #scene #left-zone .list li.item input[type=radio]:checked~label.label_orange {
-  color: #F27935;
-  border-right: solid 4px #F27935;
 }
 
 body #scene #left-zone .list li.item input[type=radio]:checked~.content {
