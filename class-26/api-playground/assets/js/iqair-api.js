@@ -1,5 +1,5 @@
 function getIQAir() {
-	fetch(`http://api.airvisual.com/v2/nearest_city?key=baf97181-5b9a-4c67-86e9-3667c42a0405
+	fetch(`https://api.airvisual.com/v2/nearest_city?key=baf97181-5b9a-4c67-86e9-3667c42a0405
 	`)
 		.then(res => res.json())
 		.then(data => {
