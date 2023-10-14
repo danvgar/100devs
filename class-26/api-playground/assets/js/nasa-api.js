@@ -27,10 +27,13 @@ function getNASA() {
 		.then(res => res.json())
 		.then(data => {
 			console.log(data)
+
 			if (data.media_type === 'image') {
-				document.querySelector("div.image.fit.special").innerHTML = `<img id="cocktailimage" src="${data.url}">`
+                document.querySelector("iframe").style.display = "none"
+				document.querySelector("img").src = `${data.url}`
 			} else if (data.media_type === 'video') {
-				document.querySelector("div.image.fit.special").innerHTML = `<iframe id="cocktailimage" src="${data.url}"></iframe>`
+                document.querySelector("img").style.display = "none"
+                document.querySelector("iframe").src = `${data.url}`
 			}
 			document.querySelector(`#cocktailinstructions`).innerText = data.explanation
 		})
