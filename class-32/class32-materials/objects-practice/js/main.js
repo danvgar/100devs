@@ -2,6 +2,17 @@
 // Extend that parent class into two children
 // Use Encapsulation, Abstraction, Inheritance, and Polymorphism 
 
+// Encapsulation
+    // Classes are lexically scoped away from each other
+    // Methods and properties have been fused into one location. If we want to update Contractor, Engineer, etc, we know where to go, without messing with parent classes.
+// Abstraction
+    // Classes do only exactly what is necessary and unique to that class
+// Inheritance
+    // subclasses are inheriting the methods and properties of parent classes if they don't have them themselves
+// Polymorphism 
+    // subclasses can overwrite functions of parent classes, if necessary
+
+
 class Contractor {
     constructor(name, role) {
         this._name = name
