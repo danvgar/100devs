@@ -1,0 +1,1 @@
+.box{border:solid 1px;border-radius:_size(border-radius);margin-bottom:_size(element-margin);padding:1.5rem}.box>:last-child{margin-bottom:0}.box.alt{border:0;border-radius:0;padding:0}.box{border-color:_palette(, border)}
