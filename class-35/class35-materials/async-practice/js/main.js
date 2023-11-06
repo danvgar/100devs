@@ -1,4 +1,4 @@
-//Code 01
+//Code 01 - vanilla JS example 1
 function houseOne() {
     console.log('Paper delivered to house 1')
 }
@@ -12,7 +12,7 @@ houseOne()
 houseTwo()
 houseThree()
 
-//Code 02
+//Code 02 - vanilla JS example 2
 function houseOne() {
     console.log('Paper delivered to house 1')
 }
@@ -26,7 +26,7 @@ houseOne()
 houseTwo()
 houseThree()
 
-//Code 03
+//Code 03 - callbacks (general)
 function houseOne() {
     console.log('Paper delivered to house 1')
 }
@@ -42,7 +42,7 @@ function houseThree() {
 houseOne()
 houseTwo(houseThree)
 
-//Code 04
+//Code 04 - callback hell
 function houseOne() {
     setTimeout(() => {
         console.log('Paper delivered to house 1')
@@ -56,7 +56,7 @@ function houseOne() {
 }
 houseOne()
 
-//Code 05
+//Code 05 - promises (general)
 const promise = new Promise((resolve, reject) => {
     const error = false
     if (!error) {
@@ -70,7 +70,7 @@ promise
     .then(data => console.log(data))
     .catch(err => console.log(err))
 
-//Code 06
+//Code 06 - promises
 function houseOne() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
@@ -102,7 +102,7 @@ houseOne()
     .then(data => console.log(data))
     .catch(err => console.log(err))
 
-//Code 07
+//Code 07 - async/await
 function houseOne() {
     return new Promise((resolve, reject) => {
         setTimeout(() => {
