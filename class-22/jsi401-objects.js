@@ -1,6 +1,6 @@
 // Javascript.info
-// JavaScript Fundamentals: 4.2 Object references and copying
-// https://javascript.info/object-copy
+// JavaScript Fundamentals: 4.1 Objects
+// https://javascript.info/object
 
 // ********************
 // Tasks
@@ -9,69 +9,96 @@
 // ********************
 // Hello, object
 // ********************
-// Using "this" in object literal
-// importance: 5
-// Here the function makeUser returns an object.
 
-// What is the result of accessing its ref? Why?
+// Write the code, one line for each action:
+// Create an empty object user.
+let user = {}
+// Add the property name with the value John.
+user.name = "John"
+// Add the property surname with the value Smith.
+user.surname = "Smith"
+// Change the value of the name to Pete.
+user.name = "Pete"
+// Remove the property name from the object.
+delete user.name
 
-// function makeUser() {
-//   return {
-//     name: "John",
-//     ref: this
-//   };
-// }
 
-// let user = makeUser();
+// ********************
+// Check for emptiness
+// ********************
 
-// alert( user.ref.name ); // What's the result?
-// solution
-// Create a calculator
-// importance: 5
-// Create an object calculator with three methods:
+// Write the function isEmpty(obj) which returns true if the object has no properties, false otherwise.
 
-// read() prompts for two values and saves them as object properties with names a and b respectively.
-// sum() returns the sum of saved values.
-// mul() multiplies saved values and returns the result.
-// let calculator = {
-//   // ... your code ...
-// };
+function isEmpty(obj) {
+    for (let prop in obj) {
+        if (prop in obj) return false
+    }
+    return true
+}
 
-// calculator.read();
-// alert( calculator.sum() );
-// alert( calculator.mul() );
-// Run the demo
+// Should work like this:
+let schedule = {};
+alert(isEmpty(schedule)); // true
+schedule["8:30"] = "get up";
+alert(isEmpty(schedule)); // false
 
-// Open a sandbox with tests.
 
-// solution
-// Chaining
-// importance: 2
-// There’s a ladder object that allows to go up and down:
+// ********************
+// Sum object properties
+// ********************
 
-// let ladder = {
-//   step: 0,
-//   up() {
-//     this.step++;
-//   },
-//   down() {
-//     this.step--;
-//   },
-//   showStep: function() { // shows the current step
-//     alert( this.step );
-//   }
-// };
-// Now, if we need to make several calls in sequence, can do it like this:
+// We have an object storing salaries of our team:
 
-// ladder.up();
-// ladder.up();
-// ladder.down();
-// ladder.showStep(); // 1
-// ladder.down();
-// ladder.showStep(); // 0
-// Modify the code of up, down and showStep to make the calls chainable, like this:
+let salaries = {
+    John: 100,
+    Ann: 160,
+    Pete: 130
+}
 
-// ladder.up().up().down().showStep().down().showStep(); // shows 1 then 0
-// Such approach is widely used across JavaScript libraries.
+// Write the code to sum all salaries and store in the variable sum. Should be 390 in the example above.
+// If salaries is empty, then the result must be 0.
 
-// Open a sandbox with tests.
+function sumSalary(obj) {
+    let sum = 0
+    for (let salary in salaries) {
+        sum += salaries.salary
+    }
+    return sum
+}
+
+
+// ********************
+// Multiply numeric property values by 2
+// ********************
+
+// Create a function multiplyNumeric(obj) that multiplies all numeric property values of obj by 2.
+
+// For instance:
+
+// before the call
+let menu = {
+    width: 200,
+    height: 300,
+    title: "My menu"
+};
+
+multiplyNumeric(menu);
+
+// after the call
+menu = {
+    width: 400,
+    height: 600,
+    title: "My menu"
+};
+
+// Please note that multiplyNumeric does not need to return anything.It should modify the object in -place.
+
+// P.S. Use typeof to check for a number here.
+
+function multiplyNumeric(obj) {
+    for (let prop of obj) {
+        if (typeof obj.prop === "number") {
+            obj.prop *= 2
+        }
+    }
+}
