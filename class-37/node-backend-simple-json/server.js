@@ -9,29 +9,27 @@ const server = http.createServer((req, res) => {
   const params = querystring.parse(url.parse(req.url).query);
   console.log(page);
 
+  function readWriteFile(pathStr, contentTypeStr) {
+    // pathStr must be the path of the file, for example 'index.html'
+    // contentTypeStr must be the content-type to parse the file as, for example text/html, text/javascript, 
+    fs.readFile(pathStr, function (err, data) {
+      res.writeHead(200, { 'Content-Type': contentTypeStr });
+      res.write(data);
+      res.end();
+    });
+  }
+
   switch (page) {
     case "/":
-      fs.readFile('index.html', function (err, data) {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
-        res.end();
-      });
+      readWriteFile('index.html', 'text/html')
       break;
 
     case '/otherpage':
-      fs.readFile('otherpage.html', function (err, data) {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
-        res.end();
-      });
+      readWriteFile('otherpage.html', 'text/html')
       break;
 
     case '/otherotherpage':
-      fs.readFile('otherotherpage.html', function (err, data) {
-        res.writeHead(200, { 'Content-Type': 'text/html' });
-        res.write(data);
-        res.end();
-      });
+      readWriteFile('otherotherpage.html', 'text/html')
       break;
 
     case '/api':
@@ -59,6 +57,7 @@ const server = http.createServer((req, res) => {
       break;
 
     case '/css/style.css':
+      readWriteFile(pathStr)
       fs.readFile('css/style.css', function (err, data) {
         res.write(data);
         res.end();
@@ -66,11 +65,7 @@ const server = http.createServer((req, res) => {
       break;
 
     case '/js/main.js':
-      fs.readFile('js/main.js', function (err, data) {
-        res.writeHead(200, { 'Content-Type': 'text/javascript' });
-        res.write(data);
-        res.end();
-      });
+      readWriteFile('js/main.js', 'text/javascript')
       break;
 
     default: {
