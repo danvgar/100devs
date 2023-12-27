@@ -57,7 +57,6 @@ const server = http.createServer((req, res) => {
       break;
 
     case '/css/style.css':
-      readWriteFile(pathStr)
       fs.readFile('css/style.css', function (err, data) {
         res.write(data);
         res.end();
