@@ -6,18 +6,19 @@ const cors = require('cors')
 const app = express();
 
 const PORT = 8000;
-// MongoDB connection string removed in favor of environment variables. Will not bother purging old commits because this database is a test database anyway and will promptly be deleted.
-const connectionString = "mongodb+srv://admin:admin@atlascluster.uxzi8qt.mongodb.net/?retryWrites=true&w=majority"
 
 // ========================
 // Link to Database
 // ========================
 // Updates environment variables
 // @see https://zellwk.com/blog/environment-variables/
-require('./dotenv')
+const dotenv = require('dotenv').config({
+    path: 'secrets/variables.env'
+})
 
 // Replace process.env.DB_URL with your actual connection string
-// const connectionString = process.env.DB_URL
+const connectionString = process.env.DB_URL
+// MongoDB connection string removed in favor of environment variables. Will not bother purging old commits because this database is a test database anyway and will promptly be deleted.
 
 // Server request handlers go within MongoDB connection promise
 MongoClient.connect(connectionString)
@@ -46,12 +47,8 @@ MongoClient.connect(connectionString)
         // Use bodyParser to handle form submissions
         app.use(bodyParser.urlencoded({ extended: true }))
 
-        // Run index.html as default for localhost:8000/
         app.get('/', (req, res) => {
             res.sendFile(__dirname + '/index.html')
-        })
-
-        app.get('/', (req, res) => {
             db.collection('quotes')
                 .find()
                 .toArray()
