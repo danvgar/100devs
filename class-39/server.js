@@ -26,12 +26,13 @@ MongoClient.connect(connectionString)
 
         // ========================
         // Middlewares
+        // Tell express that we will be using EJS as the template engine
+        app.set('view engine', 'ejs')
         // ========================
         // Use bodyParser to handle form submissions
         app.use(bodyParser.urlencoded({ extended: true }))
-
-        // Tell express that we will be using EJS as the template engine
-        app.set('view engine', 'ejs')
+        app.use(bodyParser.json())
+        app.use(express.static('public'))
 
         // ========================
         // Routes
@@ -49,7 +50,7 @@ MongoClient.connect(connectionString)
                 .catch(error => console.error(error));
         })
 
-        // PUT
+        // POST
         // Upon form submission at <form action="/quotes">
         app.post('/quotes', (req, res) => {
             // Working specifically with our MongoDB Collection called quotesCollection
@@ -64,7 +65,29 @@ MongoClient.connect(connectionString)
                 // If post promise rejected, console error.
                 .catch(error => console.error(error))
         })
-        // POST
+
+        // PUT
+        app.put('/quotes', (req, res) => {
+            quotesCollection
+                .findOneAndUpdate(
+                    { name: 'Yoda' },
+                    {
+                        $set: {
+                            name: req.body.name,
+                            quote: req.body.quote,
+                        },
+                    },
+                    {
+                        upsert: true,
+                    }
+                )
+                .then(result => {
+                    res.json('Success')
+                })
+                .catch(error => console.error(error))
+        })
+
+
         // DELETE
 
         // ========================
