@@ -1,4 +1,5 @@
 function getIQAir() {
+	// API key has expired, but remains for sake of 100devs program. Use environment variables in the future.
 	fetch(`http://api.airvisual.com/v2/nearest_city?key=baf97181-5b9a-4c67-86e9-3667c42a0405
 	`)
 		.then(res => res.json())

@@ -13,6 +13,7 @@ if (mm < 10) {
 let date = `${yyyy}-${mm}-${dd}`
 console.log(`Date: ${date}`)
 
+// API key has expired, but remains for sake of 100devs program. Use environment variables in the future.
 let url = `https://api.nasa.gov/planetary/apod?api_key=qGPeJOjRHwvpioGPrWZZqYFH8eMqVke4fdTuFqCJ&date=${date}`
 console.log(`URL: ${url}`)
 
@@ -29,11 +30,11 @@ function getNASA() {
 			console.log(data)
 
 			if (data.media_type === 'image') {
-                document.querySelector("iframe").style.display = "none"
+				document.querySelector("iframe").style.display = "none"
 				document.querySelector("img").src = `${data.url}`
 			} else if (data.media_type === 'video') {
-                document.querySelector("img").style.display = "none"
-                document.querySelector("iframe").src = `${data.url}`
+				document.querySelector("img").style.display = "none"
+				document.querySelector("iframe").src = `${data.url}`
 			}
 			document.querySelector(`#cocktailinstructions`).innerText = data.explanation
 		})
