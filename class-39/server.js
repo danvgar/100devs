@@ -1,28 +1,37 @@
-// Import CORS Package for bypassing our SOP errors
+const express = require('express');
+const bodyParser = require('body-parser')
+const MongoClient = require('mongodb').MongoClient
 const cors = require('cors')
 
-// Import Express Package for starting our server
-const express = require('express');
-
-// Store express in app
 const app = express();
 
-// Import bodyParser, a middleware that will translate the <form> submissions for the server. 
-const bodyParser = require('body-parser')
-
-// Default local port 8000
 const PORT = 8000;
-
-// Import MongoDB package 
-const MongoClient = require('mongodb').MongoClient
-
-// MongoDB connection string from our project. Database user/pw is admin/admin
+// MongoDB connection string removed in favor of environment variables. Will not bother purging old commits because this database is a test database anyway and will promptly be deleted.
 const connectionString = "mongodb+srv://admin:admin@atlascluster.uxzi8qt.mongodb.net/?retryWrites=true&w=majority"
+
+// ========================
+// Link to Database
+// ========================
+// Updates environment variables
+// @see https://zellwk.com/blog/environment-variables/
+require('./dotenv')
+
+// Replace process.env.DB_URL with your actual connection string
+// const connectionString = process.env.DB_URL
 
 // Server request handlers go within MongoDB connection promise
 MongoClient.connect(connectionString)
     // If connection promise fulfilled, continue
     .then(client => {
+
+        // ========================
+        // Middlewares
+        // ========================
+
+        // ========================
+        // Routes
+        // ========================
+
         console.log('Connected to Database')
 
         // Create a new MongoDB Database
@@ -42,6 +51,17 @@ MongoClient.connect(connectionString)
             res.sendFile(__dirname + '/index.html')
         })
 
+        app.get('/', (req, res) => {
+            db.collection('quotes')
+                .find()
+                .toArray()
+                .then(results => {
+                    console.log(results)
+                })
+                .catch(error => console.error(error))
+            // ...
+        })
+
         // Upon form submission at <form action="/quotes">
         app.post('/quotes', (req, res) => {
             // Working specifically with our MongoDB Collection called quotesCollection
@@ -57,7 +77,9 @@ MongoClient.connect(connectionString)
                 .catch(error => console.error(error))
         })
 
-        // Run server
+        // ========================
+        // Listen
+        // ========================
         app.listen(PORT, () => console.log(`Your server is running on port ${PORT}, better go catch it!`))
     })
     // If connection promise rejected, console error.
