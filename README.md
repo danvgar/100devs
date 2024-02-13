@@ -1,5 +1,5 @@
 # 100devs
-Personal repository for 100dev assignments and practice
+Personal repository for 100devs training program.
 
 ---
 
